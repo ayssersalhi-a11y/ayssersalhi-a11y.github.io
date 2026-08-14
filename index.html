@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <!-- كود التحقق من Google Search Console -->
     <meta name="google-site-verification" content="GIDWef5-zC4uPxoBcwBnjyFgdcuy8t9w85e4XWNlz1s" />
     <meta name="monetag" content="11880bb1edd4c3bb6b64441b57dac4a6">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيق خيال | عالم الأفلام والمسلسلات المدبلجة</title>
+    
+    <!-- تحسينات SEO لمحركات البحث -->
+    <title>تطبيق خيال | عالم الأفلام والمسلسلات المدبلجة - Khayal App</title>
+    <meta name="description" content="قم بتحميل تطبيق خيال (Khayal App) وتعرف على أحدث الميزات والمعلومات الخاصة بتطبيق مشاهدة الأفلام والمسلسلات المدبلجة.">
+    <link rel="canonical" href="https://ayssersalhi-a11y.github.io/khayal-app/" />
+
     <!-- خط Cairo من غوغل -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,19 +71,18 @@
 
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn-main {
-    background: var(--accent-gradient); /* التدرج اللوني الأصلي (وردي إلى بنفسجي) */
-    color: white;                       /* لون الخط أبيض */
-    padding: 1rem 2.2rem;               /* حجم الزر والمساحة الداخلية */
-    border-radius: 12px;                /* انحناء الزوايا */
-    text-decoration: none;              /* إلغاء الخط السفلي للنص */
-    font-weight: 700;                   /* سماكة الخط */
-    font-size: 1.1rem;                  /* حجم الخط */
-    display: inline-flex;              /* تجميع الأيقونة والنص أفقياً */
-    align-items: center;               /* محاذاة النص والأيقونة في المنتصف رأسياً */
-    gap: 10px;                          /* مسافة بين الأيقونة والنص */
-    box-shadow: 0 8px 25px rgba(225, 29, 72, 0.4); /* التوهج الوردي الجميل خلف الزر */
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1rem 2.2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 25px rgba(225, 29, 72, 0.4);
         }
-        
 
         .btn-secondary {
             background-color: var(--card-bg); color: var(--text-main); padding: 1rem 2rem;
@@ -85,7 +90,7 @@
             border: 1px solid var(--border-color);
         }
 
-        /* معرض الصور القابل للسحب (المربّع) */
+        /* معرض الصور القابل للسحب */
         .hero-image {
             display: flex;
             flex-direction: column;
@@ -102,11 +107,11 @@
             padding: 10px 5px;
             width: 100%;
             -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* إخفاء شريط التمرير في فيرفوكس */
+            scrollbar-width: none;
         }
 
         .carousel-container::-webkit-scrollbar {
-            display: none; /* إخفاء شريط التمرير في كروم وسفاري */
+            display: none;
         }
 
         .app-card {
@@ -196,31 +201,23 @@
         <!-- المعرض المربع القابل للسحب -->
         <div class="hero-image">
             <div class="carousel-container">
-                
-                <!-- البطاقة 1 -->
                 <div class="app-card">
-                    <!-- إذا توفرت صورة استبدل النص بها: <img src="link_to_image1.jpg" alt="الشاشة الرئيسية"> -->
                     <span style="font-size: 3.5rem;">🎬</span>
                     <h3 style="margin-top: 10px; color: #fff;">الواجهة الرئيسية</h3>
                     <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">تصفح أحدث الأفلام والمسلسلات</p>
                 </div>
 
-                <!-- البطاقة 2 -->
                 <div class="app-card">
-                    <!-- إذا توفرت صورة استبدل النص بها: <img src="link_to_image2.jpg" alt="المشغل"> -->
                     <span style="font-size: 3.5rem;">🎙️</span>
                     <h3 style="margin-top: 10px; color: #fff;">قسم الدبلجة</h3>
                     <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">أصوات احترافية وجودة عالية</p>
                 </div>
 
-                <!-- البطاقة 3 -->
                 <div class="app-card">
-                    <!-- إذا توفرت صورة استبدل النص بها: <img src="link_to_image3.jpg" alt="السيرفرات"> -->
                     <span style="font-size: 3.5rem;">⚡</span>
                     <h3 style="margin-top: 10px; color: #fff;">سيرفرات سريعة</h3>
                     <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">تشغيل بدون تقطيع</p>
                 </div>
-
             </div>
             <span class="swipe-hint">👈 اسحب لليمين واليسار للمعاينة 👉</span>
         </div>

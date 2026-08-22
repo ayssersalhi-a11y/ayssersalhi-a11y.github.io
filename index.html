@@ -48,6 +48,278 @@
             box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
         }
 
+        /* أيقونات التواصل / المنصات */
+        .icon-btn {
+            width: 40px; height: 40px; border-radius: 50%;
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-main); text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+        .icon-btn svg { width: 20px; height: 20px; fill: currentColor; }
+        .icon-btn:hover { transform: translateY(-3px); border-color: transparent; }
+        .icon-btn.telegram:hover { background: #229ED9; }
+        .icon-btn.itchio:hover { background: #FA5C5C; }
+
+        /* صف تحميل من (تيلغرام / itch.io) */
+        .download-from {
+            display: flex; align-items: center; gap: 0.8rem;
+            margin-top: 1.8rem;
+        }
+        .download-from span { color: var(--text-muted); font-weight: 600; }
+
+        /* الواجهة الرئيسية */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: space-between;
+            padding: 8rem 8% 4rem; gap: 3rem;
+            background: radial-gradient(circle at 80% 20%, rgba(225, 29, 72, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-content { flex: 1; max-width: 600px; }
+        .badge {
+            display: inline-block; background-color: rgba(225, 29, 72, 0.15); color: #f43f5e;
+            padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 700; margin-bottom: 1.5rem;
+            border: 1px solid rgba(225, 29, 72, 0.3);
+        }
+        .hero-content h1 { 
+            font-size: 2.2rem; 
+            font-weight: 800; 
+            margin-bottom: 1.2rem; 
+        }
+
+        .hero-content p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
+
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-main {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1rem 2.2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 25px rgba(225, 29, 72, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg); color: var(--text-main); padding: 1rem 2rem;
+            border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* معرض الصور القابل للسحب */
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 10px 5px;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .app-card {
+            flex: 0 0 280px;
+            height: 280px;
+            scroll-snap-align: center;
+            background: #111827;
+            border-radius: 28px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(225, 29, 72, 0.25);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .app-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .swipe-hint {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* المميزات */
+        .features { padding: 6rem 8%; text-align: center; }
+        .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem; }
+        .section-subtitle { color: var(--text-muted); margin-bottom: 4rem; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .feature-card { background-color: var(--card-bg); padding: 2.5rem 1.5rem; border-radius: 20px; border: 1px solid var(--border-color); }
+        .feature-icon { font-size: 2.8rem; margin-bottom: 1rem; }
+
+        /* خطوات التثبيت */
+        .steps { padding: 6rem 8%; background-color: #0e1422; }
+        .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .step-item { padding: 1.5rem; background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border-color); text-align: right; }
+        .step-number { width: 40px; height: 40px; background: var(--accent-gradient); color: white; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+
+        footer { padding: 3rem 8%; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-muted); }
+
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 7rem; }
+            .hero-content h1 { font-size: 1.6rem; }
+            .hero-btns { justify-content: center; }
+            .nav-links { display: none; }
+            .nav-right { gap: 0.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🎬 تطبيق خيال</div>
+        <ul class="nav-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#features">المميزات</a></li>
+            <li><a href="#install">طريقة التثبيت</a></li>
+        </ul>
+        <a href="YOUR_LINK_HERE" class="btn-download-nav" target="_blank">تحميل APK</a>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="badge">🚀 الإصدار الأول متوفر الآن</span>
+            <h1>عالمك المفضل من الأفلام والمسلسلات المدبلجة</h1>
+            <p>استمتع بمشاهدة أحدث الأفلام والمسلسلات المدبلجة بجودة عالية، مع واجهة خفيفة وسيرفرات مشاهدة سريعة.</p>
+            <div class="hero-btns">
+                <a href="YOUR_LINK_HERE" class="btn-main" target="_blank">
+                    <span>تحميل التطبيق (APK)</span>
+                    <span>⬇️</span>
+                </a>
+                <a href="#features" class="btn-secondary" style="margin-top: 0.6rem;">استكشف الميزات</a>
+            </div>
+
+            <div class="download-from">
+                <span>تحميل من:</span>
+                <!-- أيقونة تيلغرام: رابط فارغ بانتظار التعبئة -->
+                <a href="" class="icon-btn telegram" target="_blank" aria-label="تيلغرام">
+                    <svg viewBox="0 0 24 24"><path d="M22.05 2.94a1.6 1.6 0 0 0-1.66-.24L1.94 10.4c-1.15.46-1.14 2.08.02 2.53l4.7 1.83 1.8 5.86c.24.77 1.24.98 1.78.37l2.6-2.94 4.9 3.63c.9.67 2.2.19 2.44-.9l3.3-15.6c.16-.75-.1-1.5-.43-1.24zM9.3 14.3l-.6 3.4-1.4-4.55 9.9-6.9-7.9 8.05z"/></svg>
+                </a>
+                <!-- أيقونة itch.io: مرتبطة برابط التحميل -->
+                <a href="https://khayal-app.itch.io/khayal" class="icon-btn itchio" target="_blank" aria-label="itch.io">
+                    <svg viewBox="0 0 24 24"><path d="M4.32 2.577C2.87 3.416 0 6.508 0 7.323c0 1.526 1.416 2.867 2.319 2.867.957 0 2.14-1.14 2.14-2.13.06.99.933 2.13 2.05 2.13 1.156 0 2-1.14 2.048-2.13.09.99.978 2.13 2.05 2.13 1.06 0 1.916-1.09 2-2.09.14.99.94 2.09 2.05 2.09.99 0 2.05-1.19 2.09-2.13.05 1 .95 2.13 2.09 2.13.9 0 2.32-1.34 2.32-2.87 0-.815-2.87-3.907-4.32-4.746C16.31 2.14 14.9 2 12 2s-4.31.14-7.68.577zM3.2 11.28c-.38.14-.66.36-.9.68-.28 1.03-.7 4.62-.7 6.87 0 1.9.24 2.7.72 3.2.7.72 2.2 1.06 8.68 1.06s7.98-.34 8.68-1.06c.48-.5.72-1.3.72-3.2 0-2.25-.42-5.84-.7-6.87a1.94 1.94 0 0 0-.9-.68c-.55.72-1.42 1.18-2.4 1.18-1.05 0-2-.53-2.55-1.36-.55.83-1.5 1.36-2.55 1.36s-2-.53-2.55-1.36c-.55.83-1.5 1.36-2.55 1.36-.98 0-1.85-.46-2.4-1.18zm3.05 2.4c.9 0 1.65.24 2.25.72.5.4.8.87.95 1.34h1.1c.15-.47.45-.94.95-1.34.6-.48 1.35-.72 2.25-.72 1.5 0 2.55.72 2.83 1.9.1.42.1 1.05-.15 1.68-.4 1-1.4 1.9-3.3 2.85-.5.25-1.05.5-1.6.72-.15.06-.3.06-.45 0-.55-.22-1.1-.47-1.6-.72-1.9-.95-2.9-1.85-3.3-2.85-.25-.63-.25-1.26-.15-1.68.28-1.18 1.33-1.9 2.83-1.9zm.15 1.34c-.7 0-1.15.32-1.28.85-.06.24-.03.5.1.85.28.72 1.05 1.4 2.6 2.17.35.17.7.33 1.05.47l.13.05.13-.05c.35-.14.7-.3 1.05-.47 1.55-.77 2.32-1.45 2.6-2.17.13-.35.16-.61.1-.85-.13-.53-.58-.85-1.28-.85-.5 0-.9.13-1.2.4-.35.3-.5.7-.5 1.06h-.8c0-.36-.15-.76-.5-1.06-.3-.27-.7-.4-1.2-.4z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- المعرض المربع القابل للسحب -->
+        <div class="hero-image">
+            <div class="carousel-container">
+                <div class="app-card">
+                    <span style="font-size: 3.5rem;">🎬</span>
+                    <h3 style="margin-top: 10px; color: #fff;">الواجهة الرئيسية</h3>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">تصفح أحدث الأفلام والمسلسلات</p>
+                </div>
+
+                <div class="app-card">
+                    <span style="font-size: 3.5rem;">🎙️</span>
+                    <h3 style="margin-top: 10px; color: #fff;">قسم الدبلجة</h3>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">أصوات احترافية وجودة عالية</p>
+                </div>
+
+                <div class="app-card">
+                    <span style="font-size: 3.5rem;">⚡</span>
+                    <h3 style="margin-top: 10px; color: #fff;">سيرفرات سريعة</h3>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">تشغيل بدون تقطيع</p>
+                </div>
+            </div>
+            <span class="swipe-hint">👈 اسحب لليمين واليسار للمعاينة 👉</span>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title">لماذا تختار تطبيق خيال؟</h2>
+        <p class="section-subtitle">مميزات تم تصميمها لتلائم تجربة مشاهدة ممتعة</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3>محتوى مدبلج</h3>
+                <p>تشكيلة واسعة من المسلسلات والأفلام المدبلجة بلغات متعددة.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>سيرفرات سريعة</h3>
+                <p>تشغيل مباشر بدون تقطيع ويدعم مختلف سرعات الإنترنت.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+                <h3>وضع داكن أنيق</h3>
+                <p>تصميم بسيط ومريح للعين يسهل التصفح والمشاهدة ليلاً.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps" id="install">
+        <h2 class="section-title" style="text-align: center;">خطوات التثبيت</h2>
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h3>تحميل الملف</h3>
+                <p>اضغط على زر "تحميل APK" لتنزيل ملف التثبيت.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h3>التثبيت</h3>
+                <p>قم بتفعيل "التثبيت من مصادر غير معروفة" إذا لزم الأمر.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h3>المشاهدة</h3>
+                <p>افتح التطبيق وابدأ بمشاهدة مفضلاتك فوراً.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 تطبيق خيال — جميع الحقوق محفوظة</p>
+    </footer>
+
+</body>
+</html>
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo { font-size: 1.8rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: var(--text-main); }
+
+        .btn-download-nav {
+            background: var(--accent-gradient); color: white; padding: 0.6rem 1.4rem;
+            border-radius: 50px; text-decoration: none; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+        }
+
         /* الواجهة الرئيسية */
         .hero {
             min-height: 100vh; display: flex; align-items: center; justify-content: space-between;
